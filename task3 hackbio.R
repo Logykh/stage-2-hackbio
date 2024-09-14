@@ -25,7 +25,7 @@ heatmap.2(as.matrix(glioblastoma_data),
           dendrogram = 'col' , 
           Rowv = FALSE , 
           Colv = TRUE , 
-          col = redblue(75)) 
+          col = colorRampPalette(c("blue", "white", "red"))(100)) 
 
 # using sequential color palette 
 heatmap.2(as.matrix(glioblastoma_data), 
@@ -35,7 +35,7 @@ heatmap.2(as.matrix(glioblastoma_data),
           dendrogram = 'col' , 
           Rowv = FALSE , 
           Colv = TRUE ,
-          col = brewer.pal(9, "PuBu"))
+          col = colorRampPalette(c("white", "darkred"))(100))
 
 # Cluster genes only (rows)
 heatmap.2(as.matrix(glioblastoma_data), 
@@ -45,7 +45,7 @@ heatmap.2(as.matrix(glioblastoma_data),
           dendrogram = 'row' , 
           Rowv = TRUE , 
           Colv = FALSE , 
-          col = bluered(100)) 
+          col = colorRampPalette(c("blue", "white", "red"))(100)) 
 # Cluster samples  only (columns)
 heatmap.2(as.matrix(glioblastoma_data), 
           main = "Clustered columns (samples)" , 
@@ -54,7 +54,7 @@ heatmap.2(as.matrix(glioblastoma_data),
           dendrogram = 'col' , 
           Rowv = FALSE , 
           Colv = TRUE , 
-          col = bluered(100)) 
+          col = colorRampPalette(c("blue", "white", "red"))(100)) 
 
 # clustering both genes and samples
 heatmap.2(as.matrix(glioblastoma_data), 
@@ -64,7 +64,7 @@ heatmap.2(as.matrix(glioblastoma_data),
           dendrogram = 'both' , 
           Rowv = TRUE , 
           Colv = TRUE , 
-          col = brewer.pal(9, "PuBu")) 
+          col = colorRampPalette(c("blue", "white", "red"))(100)) 
 
 ############################################################################
 
